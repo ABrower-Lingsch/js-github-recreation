@@ -12,9 +12,42 @@ body {
 nav {
     display: flex;
     align-items: center;
-    background-color: rgb(34, 36, 37);
+    background-color: rgb(19, 28, 31);
     margin: 0;
     height: 60px;
+}
+
+.github-icon:hover {
+    color: rgb(128, 127, 127);
+}
+
+.nav-left li a:hover {
+    color: rgb(128, 127, 127);
+}
+
+.nav-right li a:hover {
+    color: rgb(128, 127, 127);
+}
+
+.pages li a:hover {
+    background-color: rgb(128, 127, 127);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(106, 105, 105);
+    cursor: pointer;
+}
+
+.new-repo-button:hover {
+    background-color: rgb(67, 158, 37);
+    cursor: pointer;
+}
+
+.repo-name:hover {
+    cursor: pointer;
+    color: blue;
 }
 
 nav>ul {
@@ -187,7 +220,7 @@ main {
     background-color: rgb(12, 14, 18);
     border: solid 1px rgb(72, 72, 72);
     border-radius: 5px;
-    margin-right: 20px;
+    margin-right: 22px;
     margin-bottom: 20px;
 }
 
@@ -203,7 +236,7 @@ main {
 }
 
 .new-repo-button {
-    margin-left: 20px;
+    margin-left: 23px;
     height: 30px;
     background-color: rgb(35, 150, 48);
     border-style: none;
@@ -214,4 +247,68 @@ main {
 
 .repo-options {
     border-bottom: solid 0.5px rgba(128, 128, 128, 0.414);
+}
+
+.repo-name {
+    color: rgb(72, 146, 254);
+    font-size: 25px;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.repo-privacy {
+    color: rgb(165, 164, 164);
+    margin-top: 32px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    /* border: solid 0.5px grey; */
+}
+
+.repos {
+    display: flex;
+    flex-direction: column;
+}
+
+.repos-info {
+    display: flex;
+}
+
+.repo-update {
+    color: rgb(143, 143, 143);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    font-size: 12px;
+    margin: 0 0 0 15px;
+
+}
+
+.repo-fav-buttons {
+    margin-left: auto;
+    margin-top: 30px;
+}
+
+.repo-star,
+.repo-caret {
+    height: 30px;
+    background-color: rgb(34, 36, 37);
+    border: solid 0.5px rgb(72, 72, 72);
+    color: rgb(181, 180, 180);
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.lang-type {
+    color: rgb(143, 143, 143);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    font-size: 13px;
+}
+
+.type-and-update {
+    display: flex;
+    border-bottom: solid 0.5px rgba(128, 128, 128, 0.414);
+    padding-bottom: 20px;
+}
+
+.type-and-update>span>i {
+    color: purple;
 }
