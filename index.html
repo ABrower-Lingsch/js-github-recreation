@@ -39,15 +39,15 @@
     <main>
         <section class="left-bar">
             <section class="profile-info">
-                <img class="profile-pic" src="https://avatars.githubusercontent.com/u/112423427?v=4">
+                <!-- <img class="profile-pic" src="https://avatars.githubusercontent.com/u/112423427?v=4">
                 <h1 class="my-name">Adam Brower-Lingsch</h1>
                 <p class="username">ABrower-Lingsch</p>
                 <button class="edit-button">Edit profile</button>
-                <p class="joined"><i class="fa-solid fa-rocket"></i> Joined 22 days ago</p>
+                <p class="joined"><i class="fa-solid fa-rocket"></i> Joined 22 days ago</p> -->
             </section>
             <section class="org">
-                <h2>Organizations</h2>
-                <img class="org-pics" src="https://avatars.githubusercontent.com/u/112399320?s=64&v=4">
+                <!-- <h2>Organizations</h2> -->
+                <!-- <img class="org-pics" src="https://avatars.githubusercontent.com/u/112399320?s=64&v=4"> -->
             </section>
         </section>
         <section class="right-bar">
@@ -59,7 +59,7 @@
                 <button class="new-repo-button"><i class="fa-solid fa-book"></i> New</button>
             </section>
             <div class="repos">
-                <section class="repos-info">
+                <!-- <section class="repos-info">
                     <p class="repo-name"><a>js-github-recreation</a></p>
                     <p class="repo-privacy">Public</p>
                     <div class="repo-fav-buttons">
@@ -82,7 +82,7 @@
                 <section class="type-and-update">
                     <span class="lang-type"><i class="fa-solid fa-circle"></i> CSS</span>
                     <p class="repo-update">Updated 4 days ago</p>
-                </section>
+                </section> -->
             </div>
 
         </section>
@@ -90,8 +90,40 @@
     <footer>
 
     </footer>
-
-
+    <script id="repos-template" type="text/x-handlebars-template">
+        {{#each repos}}
+        <section class="repos-info">
+            <p class="repo-name"><a>{{name}}</a></p>
+            <p class="repo-privacy">{{visibility}}</p>
+            <div class="repo-fav-buttons">
+                <button class="repo-star"><i class="fa-regular fa-star"></i> Star</button>
+                <button class="repo-caret"><i class="fa-solid fa-caret-down"></i></button>
+            </div>
+        </section>
+        <section class="type-and-update">
+            <span class="lang-type"><i class="fa-solid fa-circle"></i>{{language}}</span>
+            <p class="repo-update">{{created_at}}</p>
+        </section>
+        {{/each}}
+       </script>
+    <script id="user-template" type="text/x-handlebars-template">
+        {{#with user}}
+        <img class="profile-pic" src="https://avatars.githubusercontent.com/u/112423427?v=4">
+                <h1 class="my-name">{{name}}</h1>
+                <p class="username">{{login}}</p>
+                <button class="edit-button">Edit profile</button>
+                <p class="joined"><i class="fa-solid fa-rocket"></i>{{created_at}}</p>
+        {{/with}}
+       </script>
+    <script id="org-template" type="text/x-handlebars-template">
+        {{#each orgs}}
+        <h2>Organizations</h2>
+                <img class="org-pics" src="{{avatar_url}}">
+        {{/each}}
+       </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/main.js"></script>
 </body>
 
