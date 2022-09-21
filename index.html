@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Recreation</title>
     <link rel="stylesheet" href="./css/styles.css">
+    ,
+    <link rel="stylesheet" href="./css/github-lang-colors.css">
     <script src="https://kit.fontawesome.com/77f165e855.js" crossorigin="anonymous"></script>
 </head>
 
@@ -101,8 +103,8 @@
             </div>
         </section>
         <section class="type-and-update">
-            <span class="lang-type"><i class="fa-solid fa-circle"></i>{{language}}</span>
-            <p class="repo-update">{{created_at}}</p>
+            <span class="lang-type"><i class="fa-solid fa-circle {{language}}"></i> {{language}}</span>
+            <p class="repo-update">Updated {{updated_at}}</p>
         </section>
         {{/each}}
        </script>
@@ -112,7 +114,7 @@
                 <h1 class="my-name">{{name}}</h1>
                 <p class="username">{{login}}</p>
                 <button class="edit-button">Edit profile</button>
-                <p class="joined"><i class="fa-solid fa-rocket"></i>{{created_at}}</p>
+                <p class="joined"><i class="fa-solid fa-rocket"></i> Joined {{created_at}}</p>
         {{/with}}
        </script>
     <script id="org-template" type="text/x-handlebars-template">

@@ -2,7 +2,6 @@
 
     'use strict'
 
-    const API_KEY = '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'
     function generateHTML(data) {
         console.log({data});
         const source1 = document.querySelector("#repos-template").innerHTML;
